@@ -1,0 +1,65 @@
+//======== COLORS WEB PAGE =======
+$red: #EF2A82;
+$dark_blue: #172755;
+$blue: #0088F0;
+$text_color_main: #172755;
+$text_color_secondary: #8794BA;
+$text_white: #FFFFFF;
+$chart_lines: #EEEEF7;
+
+*{
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #F8F9FF;
+  font-family: 'Roboto';
+}
+
+.container{
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.edition{
+  position: fixed;
+  display: flex;
+  z-index: 30;
+  background: $text_white;
+  width: 100%;
+  padding: 0.5rem;
+  box-shadow: 0rem 0rem 0.5rem rgba(0,0,0,0.5);
+  justify-content: space-between;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.3s ease-out;
+  &.visible{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.edition__title{
+  text-align: center;
+  width: 100%;
+  color: $dark_blue;
+}
+.button{
+  
+  &.button--edition{
+    padding: 7px 30px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+@import "./header";
+@import "./main";
+@import "./pricing";
+@import "./footer";
